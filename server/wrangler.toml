@@ -1,0 +1,21 @@
+# wrangler.toml
+
+name = "gomoku-worker"
+main = "index.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# 自定义域名
+routes = [
+  { pattern = "gomoku.legotrain.eu.org", zone_name = "legotrain.eu.org", custom_domain = true }
+]
+
+# Durable Objects 绑定
+[[durable_objects.bindings]]
+name = "MATCH_ROOM"
+class_name = "GomokuMatchRoom"
+
+# DO 迁移配置（免费版必须用 new_sqlite_classes）
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GomokuMatchRoom"]

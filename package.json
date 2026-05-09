@@ -1,0 +1,16 @@
+{
+  "name": "gomoku-online",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:h5": "uni build --platform h5",
+    "build:h5": "uni build --platform h5"
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "^3.0.0-alpha-5000820260508001",
+    "@dcloudio/uni-h5": "^3.0.0-alpha-5000820260508001",
+    "@dcloudio/vite-plugin-uni": "^3.0.0-alpha-5000820260508001",
+    "vue": "^3.4.21"
+  }
+}

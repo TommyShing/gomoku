@@ -1,0 +1,19 @@
+# wrangler-h5.toml
+# H5 前端 Worker 配置 — 与 WebSocket Worker 完全隔离
+
+name = "gomoku-h5"
+main = "h5-worker.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# 静态文件目录：指向 HBuilderX 的 H5 构建产物
+# HBuilderX 构建 H5 的默认输出路径：unpackage/dist/build/h5
+[assets]
+directory = "../unpackage/dist/build/h5"
+browser_TTL = 86400  # 浏览器缓存 1 天
+
+# 自定义域名（需要先 DNS 解析到 Cloudflare）
+# 建议用 h5-gomoku.legotrain.eu.org 或类似的子域名
+routes = [
+  { pattern = "h5-gomoku.legotrain.eu.org", zone_name = "legotrain.eu.org", custom_domain = true }
+]

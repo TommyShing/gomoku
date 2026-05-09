@@ -1,0 +1,31 @@
+{
+    "name" : "五子棋",
+    "appid" : "__UNI__G4AE811F",
+    "description" : "在线五子棋对弈",
+    "versionName" : "1.0.0",
+    "versionCode" : "100",
+    "transformPx" : false,
+    "networkTimeout" : {
+        "request" : 10000,
+        "connectSocket" : 5000,
+        "uploadFile" : 60000,
+        "downloadFile" : 60000
+    },
+    "app-plus" : {},
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "wxd0afdf31e9f2f429",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : true,
+            "minified" : true
+        },
+        "usingComponents" : true,
+        "permission" : {}
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "vueVersion" : "3"
+}
